@@ -2,30 +2,30 @@
 
 :root {
         /*  colors */
-    --primary-color: #0d9488; 
-    --secondary-color:#fcd34d;
-    --tertiary-color:  #fb923c;
-    --cuaternary-color:#0891b2;
+    --primary-color: #777; 
+    --secondary-color:#8181;
+    --tertiary-color:  #444;
+    --cuaternary-color:#333;
     --txt: #78716c; 
     --txt-light: #9b9794; 
-    --black-txt: #18181b; 
-    --light-txt:#f3f4f6;
-    --background-light:#fff7ed;
+    --black-txt: #222; 
+    --light-txt:#f9f9f9;
+    --background-light:#999999;
     --background-dark: #1a1a1a;
     
     color-scheme: light only;
 
     /*  mobile fonts*/
-    --h1: 2.222rem;
-    --h2: 1.3rem;
-    --h3: 1.2rem;
+    --h1: 2.4rem;
+    --h2: 1.36rem;
+    --h3: 1.20rem;
     --p: .888rem;
 
 /*  desktop fonts*/
-    --h1-desktop:2.7rem;
-    --h2-desktop: 2.1rem;
-    --h3-desktop: 1.8rem;
-    --p-desktop: 1.4rem;
+    --h1-desktop:3.2rem;
+    --h2-desktop: 2.4rem;
+    --h3-desktop: 1.6rem;
+    --p-desktop: .8rem;
 }
 
 *{
@@ -98,13 +98,13 @@ a{
 .slider--indicators span {
     width: 10px;
     height: 10px;
-    background-color: var(--txt-light);
+    background-color: var(--secondary-color);
     border-radius: 50%;
     cursor: pointer;
 }
 
 .slider--indicators .active {
-    background-color: var(--primary-color);
+    background-color: var(--tertiary-color);
 }
 
 
@@ -449,10 +449,6 @@ h1{
     height: auto;
     display: flex;
     flex-direction: grid;
-    overflow-x: scroll;
-    overscroll-behavior-x: contain;
-    overflow-y: hidden;
-    scroll-snap-type: x mandatory;
     }
 .catalogo--slider img{
     scroll-snap-align: center;
@@ -507,7 +503,7 @@ border-radius: 1.8rem;
     font-style: normal;
     background-color: var(--tertiary-color);
     padding: .333rem;
-    color: white;
+    color: var(--light-txt);
     text-decoration: none;
     border-radius: .333rem;
     justify-content: center;
