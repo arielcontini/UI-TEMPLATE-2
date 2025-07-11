@@ -227,7 +227,7 @@ header{
     flex-direction: column;
     width: 100%;
     height: auto;
-    min-height: 640px;
+    min-height: 720px;
     margin: 0 auto;
     background-image: url(./bg.webp);
     background-size: cover;
@@ -248,10 +248,10 @@ header img{
     width: 100%;
     height: auto;
   background: linear-gradient(190deg,
-  oklch(41.185% 0.24743 280.073 / 0.339) 33%,
-oklch(23.503% 0.00003 271.152 / 0.9) 100%,
   oklch(0.0969 0 0 / 1%) 66%,
-  oklch(0% 0 0 / 0.33) 10%);
+  oklch(0% 0 0 / 0.33) 10%)
+    oklch(41.185% 0.24743 280.073 / 0.339) 33%,
+    oklch(23.503% 0.00003 271.152 / 0.9) 100%,;
     margin: 0 auto;
     padding: .666rem;
 }
@@ -413,7 +413,7 @@ justify-content: center;
     padding: 1.2rem;
     margin: 0 auto;
   background: linear-gradient(190deg,
-  oklch(44.15% 0.24497 292.211 / 0.339) 33%,
+  oklch(13.484% 0.05788 302.416 / 0.339) 33%,
 oklch(23.503% 0.00003 271.152 / 0.9) 100%,
   oklch(0.0969 0 0 / 1%) 66%,
   oklch(0% 0 0 / 0.33) 10%);
@@ -441,6 +441,7 @@ h1{
     border-radius: .666rem;
     margin: 1.2rem auto;
     background-color: light-dark( var(--background-light), var(--background-dark));
+       box-shadow: 0 .333rem .999rem   oklch(47.134% 0.21831 292.778 / 0.339);
 }
 
 .slider--info{
@@ -528,11 +529,11 @@ border-radius: 1.8rem;
     width: 100%;
     height: auto;
     padding: 1.2rem;
-   background: linear-gradient(190deg,
-  oklch(73.517% 0.12476 201.498 / 0.339) 33%,
-oklch(23.503% 0.00003 271.152 / 0.9) 100%,
-  oklch(0.0969 0 0 / 1%) 66%,
-  oklch(0% 0 0 / 0.33) 10%);
+   background: linear-gradient(120deg,
+  oklch(0% 0 0 / 0.33) 10%),
+   oklch(73.517% 0.12476 201.498 / 0.339) 33%,
+  oklch(26.709% 0.13305 289.651 / 0.01) 66%,
+ oklch(34.119% 0.08234 257.263 / 0.9) 100%,;
 }
 
 .form-container {
@@ -543,7 +544,7 @@ oklch(23.503% 0.00003 271.152 / 0.9) 100%,
       background-color: light-dark( var(--background-light), var(--background-dark));
     padding: 2rem 3rem;
     border-radius: .8rem;
-    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 .333rem .999rem   oklch(47.134% 0.21831 292.778 / 0.339);
     width: 100%;
     max-width: 540px;
 }
@@ -619,7 +620,7 @@ footer{
 }
 
 .button--ig{
-    max-width: 32px;
+    max-width: 24px;
     height: auto;
     background-color: transparent;
 }
