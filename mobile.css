@@ -1,20 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 :root {
+    color-scheme: light dark;
         /*  colors */
-    --primary-color: #777; 
-    --secondary-color:#8181;
-    --tertiary-color:  #444;
-    --cuaternary-color:#333;
-    --txt: #78716c; 
-    --txt-light: #9b9794; 
-    --black-txt: #222; 
-    --light-txt:#f9f9f9;
+    --dark-txt: #999; 
+    --light-txt:#222;
     --background-light:#999999;
     --background-dark: #1a1a1a;
-    
-    color-scheme: light only;
-
     /*  mobile fonts*/
     --h1: 2.4rem;
     --h2: 1.36rem;
@@ -40,7 +32,8 @@ body{
     font-family: "Nunito", serif;
     font-optical-sizing: auto;
     font-style:normal;
-    background-color:var(--background-light);
+     background-color: light-dark( var(--background-light), var(--background-dark));
+     color:  light-dark( var(--light-txt), var(--dark-txt));
 }
 a{
     text-decoration: none;
@@ -69,13 +62,14 @@ a{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: var(--tertiary-color);
-    color: var(--light-txt);
+     background-color: light-dark( var(--background-light), var(--background-dark));
+     color:  light-dark( var(--light-txt), var(--dark-txt));
     border: none;
     cursor: pointer;
     z-index: 2;
     padding: .666rem;
     border-radius: .666rem;
+    border: .016rem solid light-dark( var(--light-txt), var(--dark-txt))
 }
 
 .slider--prev {
@@ -98,35 +92,36 @@ a{
 .slider--indicators span {
     width: 10px;
     height: 10px;
-    background-color: var(--secondary-color);
+     background-color: light-dark( var(--background-light), var(--background-dark));
+     color:  light-dark( var(--light-txt), var(--dark-txt));
     border-radius: 50%;
     cursor: pointer;
 }
 
 .slider--indicators .active {
-    background-color: var(--tertiary-color);
+     background-color: light-dark( var(--background-light), var(--background-dark));
 }
 
 
 /* titulos */
 
 .title--orange{
-    color:var(--tertiary-color);
+     color:  light-dark( var(--light-txt), var(--dark-txt));
     text-shadow: .011rem .111rem #18090070;
 }
 
 .title--turquesa{
-    color:var(--primary-color);
+     color:  light-dark( var(--light-txt), var(--dark-txt));
     text-shadow: .011rem .111rem #00181441;
 }
 
 .title--yellow{
-    color:var(--secondary-color);
+     color:  light-dark( var(--light-txt), var(--dark-txt));
     text-shadow: .011rem .111rem #18090070;
 }
 
 .title--blue{
-    color:var(--cuaternary-color);
+     color:  light-dark( var(--light-txt), var(--dark-txt));
     text-shadow: .011rem .111rem #18090076;
 }
 
@@ -146,16 +141,17 @@ ul li{
             justify-content: space-between;
             align-items: center;
             padding: 1rem 2rem;
-            background-color: var(--tertiary-color);
+        background-color: light-dark( var(--background-light), var(--background-dark));
             width: 100%;
             height: auto;
+            max-height: 480px;
         }
 
         .logo {
             font-family: "Nunito", sans-serif;
             font-optical-sizing: auto;
             font-style: normal;
-            color: var(--light-txt);
+        color:  light-dark( var(--light-txt), var(--dark-txt));
             font-size: var(--p);
             font-weight: bold;
         }
@@ -167,7 +163,7 @@ ul li{
             list-style: none;
             display: none;
             flex-direction: column;
-            background-color: var(--tertiary-color);
+         background-color: light-dark( var(--background-light), var(--background-dark));
             position: absolute;
             top: 3.2rem;
             left: 0;
@@ -184,15 +180,15 @@ ul li{
             padding: .666rem 0;
         }
 
-        .nav-links a {
-            color: var(--light-txt);
+        .nav-links a {      
+            color:  light-dark( var(--light-txt), var(--dark-txt));
             text-decoration: none;
             padding: 1rem 2rem;
             transition: background 0.3s;
         }
 
         .nav-links a:hover {
-            background: rgba(255, 255, 255, 0.2);
+         background-color: light-dark( var(--background-light), var(--background-dark));
         }
 
         .dropdown-content {
@@ -200,8 +196,7 @@ ul li{
         }
 
         .dropdown-content a {
-            color: var(--light-txt);
-            background: var(--tertiary-color);
+      background-color: light-dark( var(--background-light), var(--background-dark));
             text-decoration: none;
             padding: 8px 20px;
         }
@@ -252,7 +247,11 @@ header img{
 .about-us--container{
     width: 100%;
     height: auto;
-    background-color: var(--tertiary-color);
+  background: linear-gradient(190deg,
+  oklch(41.185% 0.24743 280.073 / 0.339) 33%,
+oklch(23.503% 0.00003 271.152 / 0.9) 100%,
+  oklch(0.0969 0 0 / 1%) 66%,
+  oklch(0% 0 0 / 0.33) 10%);
     margin: 0 auto;
     padding: .666rem;
 }
@@ -273,7 +272,7 @@ header img{
     font-weight: 400;
     font-style: normal;
     font-size: var(--h2);
-    color: var(--light-txt);
+     color:  light-dark( var(--light-txt), var(--dark-txt));
     text-align: center;
     margin: .333rem auto;
 }
@@ -283,7 +282,7 @@ header img{
     font-optical-sizing: auto;
     font-style: normal;
     font-size: var(--p);
-    color: var(--light-txt);
+       color:  light-dark( var(--light-txt), var(--dark-txt));
     text-align: left;
     margin: 0 auto;
     padding: 1.2rem .111rem;
@@ -298,7 +297,7 @@ header img{
     flex-direction: column;
     align-items: center;
 justify-content: center;
-background-color: var(--cuaternary-color);
+     background-color: light-dark( var(--background-light), var(--background-dark));
 }
 
 .talles--card{
@@ -325,7 +324,7 @@ justify-content: center;
     flex-direction: column;
     align-items: center;
 justify-content: center;
-background-color: var(--secondary-color);
+     background-color: light-dark( var(--background-light), var(--background-dark));
 }
 
 .compras--card{
@@ -341,7 +340,7 @@ justify-content: center;
     font-optical-sizing: auto;
     font-style: normal;
     font-size: var(--h2);
-    color: var(--black-txt);
+       color:  light-dark( var(--light-txt), var(--dark-txt));
     text-align: center;
     margin: .999rem auto;
     font-weight: 700;
@@ -351,7 +350,7 @@ justify-content: center;
     font-family: "Nunito", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    color: var(--black-txt);
+     color:  light-dark( var(--light-txt), var(--dark-txt));
     text-align: left;
     margin: 0 auto;
     padding: .999rem;
@@ -365,7 +364,7 @@ justify-content: center;
     width: 100%;
     height: auto;
     min-height: 640px;
-    background-color: var(--primary-color);
+     background-color: light-dark( var(--background-light), var(--background-dark));
     margin: 0 auto;
     align-items: center;
     justify-content: center;
@@ -386,7 +385,7 @@ justify-content: center;
     font-optical-sizing: auto;
     font-style: normal;
     font-size: var(--h2);
-    color: var(--light-txt);
+       color:  light-dark( var(--light-txt), var(--dark-txt));
     text-align: center;
     margin: .999rem auto;
 }
@@ -396,7 +395,7 @@ justify-content: center;
     font-optical-sizing: auto;
     font-style: normal;
     font-size: var(--p);
-    color: var(--light-txt);
+      color:  light-dark( var(--light-txt), var(--dark-txt));
     text-align: center;
     margin: 0 auto;
     padding: .333rem;
@@ -413,7 +412,12 @@ justify-content: center;
     flex-direction: column;
     padding: 1.2rem;
     margin: 0 auto;
-    background-color: var(--primary-color);
+  background: linear-gradient(190deg,
+  oklch(44.15% 0.24497 292.211 / 0.339) 33%,
+oklch(23.503% 0.00003 271.152 / 0.9) 100%,
+  oklch(0.0969 0 0 / 1%) 66%,
+  oklch(0% 0 0 / 0.33) 10%);
+           border: .016rem solid var(--background-dark);
 }
 
 h1{
@@ -423,6 +427,7 @@ h1{
     font-size: var(--h1);
     padding: .999rem;
     text-align: center;
+    color:  light-dark( var(--light-txt), var(--dark-txt));
 }
 
 .catalogo--producto{
@@ -433,15 +438,14 @@ h1{
     height: auto;
     align-items: center;
     justify-content: center;
-    border: .666rem solid var(--background-light);
     border-radius: .666rem;
     margin: 1.2rem auto;
-    background-color: var(--background-light);
+    background-color: light-dark( var(--background-light), var(--background-dark));
 }
 
 .slider--info{
     padding: .666rem;
-    color: var(--txt-light);
+     color:  light-dark( var(--light-txt), var(--dark-txt));
 }
 
 .catalogo--slider{
@@ -467,7 +471,7 @@ border-radius: 1.8rem;
     font-family: "Nunito", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    color: var(--black-txt);
+     color:  light-dark( var(--light-txt), var(--dark-txt));
     list-style-type: none;
     text-align: left;
     line-height: 1.2rem;
@@ -484,6 +488,7 @@ border-radius: 1.8rem;
     text-align: center;
     line-height: 2.1rem;
     padding: .333rem;
+    color:  light-dark( var(--light-txt), var(--dark-txt));
 }
 
 .catalogo--img{
@@ -501,14 +506,15 @@ border-radius: 1.8rem;
     font-family: "Nunito", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    background-color: var(--tertiary-color);
+    background-color: light-dark( var(--background-light), var(--background-dark));
     padding: .333rem;
-    color: var(--light-txt);
+     color:  light-dark( var(--light-txt), var(--dark-txt));
     text-decoration: none;
     border-radius: .333rem;
     justify-content: center;
     align-items: center;
     text-align: center;
+    border: .016rem solid light-dark( var(--light-txt), var(--dark-txt));
 }
 
 
@@ -522,7 +528,11 @@ border-radius: 1.8rem;
     width: 100%;
     height: auto;
     padding: 1.2rem;
-    background-color: var(--primary-color);
+   background: linear-gradient(190deg,
+  oklch(73.517% 0.12476 201.498 / 0.339) 33%,
+oklch(23.503% 0.00003 271.152 / 0.9) 100%,
+  oklch(0.0969 0 0 / 1%) 66%,
+  oklch(0% 0 0 / 0.33) 10%);
 }
 
 .form-container {
@@ -530,7 +540,7 @@ border-radius: 1.8rem;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: #fff;
+      background-color: light-dark( var(--background-light), var(--background-dark));
     padding: 2rem 3rem;
     border-radius: .8rem;
     box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
@@ -543,7 +553,7 @@ border-radius: 1.8rem;
     font-weight: 400;
     font-style: normal;
     margin-bottom: 20px;
-    color: #333;
+     color:  light-dark( var(--light-txt), var(--dark-txt));
     text-align: center;
 }
 .form-container p {
@@ -551,7 +561,7 @@ border-radius: 1.8rem;
     font-weight: 400;
     font-style: normal;
     margin-bottom: 2rem;
-    color: var(--dark-txt);
+     color:  light-dark( var(--light-txt), var(--dark-txt));
 }
 
 
@@ -559,11 +569,10 @@ border-radius: 1.8rem;
 .form-container label {
     display: block;
     margin-bottom: 5px;
-    color: #555;
     font-size: 1.2rem;
     font-family: "Hachi Maru Pop", cursive;
     margin-bottom: 20px;
-    color: var(--dark-txt);
+      color:  light-dark( var(--light-txt), var(--dark-txt));
 }
 .form-container input[type="text"],
 .form-container input[type="email"] {
@@ -583,7 +592,7 @@ border-radius: 1.8rem;
     width: 100%;
     padding: 10px;
     background: #007bff;
-    color: white;
+     color:  light-dark( var(--light-txt), var(--dark-txt));
     border: none;
     border-radius: 5px;
     font-size: 16px;
@@ -604,7 +613,8 @@ footer{
     width: 100%;
     height: auto;
     min-height: 240px;
-    background-color: var(--tertiary-color);
+    color:  light-dark( var(--light-txt), var(--dark-txt));
+     background-color: light-dark( var(--background-light), var(--background-dark));
     text-align: center;
 }
 
@@ -626,24 +636,24 @@ footer ul li{
     padding: .1rem;
     font-size: 1.2rem;
     font-weight: 600;
-    color: var(--light-txt);
+     color:  light-dark( var(--light-txt), var(--dark-txt));
 }
 
 
 .footer--sign{
     font-size: .666rem;
     padding: .666rem;
-    color: var(--light-txt);
+       color:  light-dark( var(--light-txt), var(--dark-txt));
 }
 
 .footer--sign a{
-    color: var(--light-txt);
+     color:  light-dark( var(--light-txt), var(--dark-txt));
     text-decoration: none;
     transition: .5s;
 }
 
 .footer--sign a:hover{
-    color: var(--txt);
+      color:  light-dark( var(--light-txt), var(--dark-txt));
     text-decoration: none;
     transition: .5s;
 }
